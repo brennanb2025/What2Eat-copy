@@ -1,0 +1,23 @@
+.cart {
+  width: 450px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.cart h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cart div {
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 16px;
+}
+
+.cart div:last-child {
+  border-bottom: none;
+}

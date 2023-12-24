@@ -1,0 +1,23 @@
+.ingredient-list-container {
+  max-height: 15rem;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ingredient-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ingredient-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.ingredient-list-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.ingredient-list-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

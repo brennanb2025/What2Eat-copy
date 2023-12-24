@@ -1,0 +1,103 @@
+.profileButton {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.profileButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 80%;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 150px; 
+  right: 50%; 
+  transform: translateX(50%);
+  width: 50px;
+  height: 50px;
+}
+
+.bannerContainer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #228b22;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 25px;
+  top: 60px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 2;
+  width: 150px;
+}
+
+.dropdownContent .btn {
+  margin: 8px;
+}
+
+.dropdownContent > * {
+  padding: 8px 16px;
+  border-top: 1px solid #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdownContent > *:hover {
+  background-color: #ddd;
+}
+
+.dropdownContent > *:first-child {
+  border-top: none;
+}
+
+.loginButton {
+  background-color: #228b22;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #176a16;
+  }
+}
