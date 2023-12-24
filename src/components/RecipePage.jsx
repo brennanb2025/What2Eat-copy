@@ -48,6 +48,11 @@ const RecipePage = () => {
     }
   }, [userData]);
 
+  //just set the recipes when they're loaded - setting when change wasn't working very well
+  useEffect(() => {
+    setRecipesToLoadedData(); 
+  }, [loadedRecipes]);
+
   useEffect(() => {
     if (selectedIngredients) {
       //reset urgent ingredients when selected ingredients changes
@@ -96,28 +101,28 @@ const RecipePage = () => {
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
 
-  // const GetRecipeData = () => {
-  //   if (loadedRecipes != null) {
-  //     //only load once
-  //     return;
-  //   }
-  //   fetch("RecipesLimited.json", {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   })
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (recipeJson) {
-  //       console.log("Fetched recipes");
-  //       setLoadedRecipes(recipeJson);
-  //     });
-  // };
-  // useEffect(() => {
-  //   GetRecipeData();
-  // }, []);
+  const GetRecipeData = () => {
+    if (loadedRecipes != null) {
+      //only load once
+      return;
+    }
+    fetch("RecipesLimited.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (recipeJson) {
+        console.log("Fetched recipes");
+        setLoadedRecipes(recipeJson);
+      });
+  };
+  useEffect(() => {
+    GetRecipeData();
+  }, []);
 
   const removeFromFavorites = (recipeId) => {
     const updateFavorites = favoriteRecipes.filter(
